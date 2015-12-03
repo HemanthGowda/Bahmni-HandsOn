@@ -29,7 +29,7 @@ https://bahmni.atlassian.net/wiki/display/BAH/Registration+Page#RegistrationPage
  **4. Upload a concept set (for adding to observation template)**
  To complete this task you have to upload a ECG template to the system.
  You can find CSV file from following link.
- https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/csv
+ https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/ECG-CSV
  Make sure you upload the concepts.csv before concept_set.csv.
 
 Follow below link to know how to import csv.
@@ -42,6 +42,7 @@ https://bahmni.atlassian.net/wiki/display/BAH/Create+a+New+Observation+Form#Crea
        “<Concept Full Name>" : {
 			“autocomplete" : true,
        	}
+Make sure the Concept is Coded.
 
  **6. Configure a display control for the ECG.**
  To complete this task you have to configure a new section in patient dashboard which shows the data from ECG template.
