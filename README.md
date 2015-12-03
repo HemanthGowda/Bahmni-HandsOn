@@ -6,7 +6,7 @@ This is a set of exercises that we can go through to understand how Bahmni can b
 Theme: Lets create a new workflow for a hospital that primarily deals with emergency care. 
 
 Exercises
-=========
+---------
 
  **1. Create an emergency registration app**
  
@@ -28,16 +28,16 @@ Hint: Take a look at /var/www/bahmni_config/openmrs/apps/registration/app.json, 
 
  **3. Go to consultation after registering a patient.**
 
-Emergency registration are being performed by clinicians who need to directly go to the consultation screen. The consultation screen is available in the clinical app. Try registering a patient, then going through the clinical app and opening the patient. You will get an option to start consultation for the patient. 
+Emergency registration are being performed by clinicians who need to directly go to the consultation screen after registering a patient. The consultation screen is available in the clinical app. Try registering a patient, then going through the clinical app and opening the patient. You will get an option to start consultation for the patient. 
 https://<ip>/bahmni/clinical/#/default/patient/{patientUuid}/dashboard/concept-set-group/observations
  
 Documentation to [configure a forward url](https://bahmni.atlassian.net/wiki/display/BAH/Registration+Page#RegistrationPage-Registration2ndPage)
 
 
- **4. Upload a concept set (for adding to observation template)**
+ **4. Create a new Observation Template**
 
-To complete this task you have to upload a ECG template to the system.
-A sample csv is available [here](https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/ECG-CSV). Make sure you upload the concepts.csv before concept_set.csv. See what changes on the consultation tab once the upload is complete. 
+On the observations tab of the clinical app, there are multiple templates/forms that can be filled. These are setup as concept sets in OpenMRS. A basic version of the template can be created by creating a concept set and attaching them to a special concept called "All Observation Templates". You can, alternatively, use the admin app to upload a concept set via csv. 
+Lets create a new observation template to capture ECG results. A sample csv is available [here](https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/ECG-CSV). Make sure you upload the concepts.csv before concept_set.csv. 
 
 Documentation to [import a csv](https://bahmni.atlassian.net/wiki/display/BAH/Create+a+New+Observation+Form#CreateaNewObservationForm-AddObservationFormstoBahmni)
 
@@ -45,26 +45,30 @@ Documentation to [import a csv](https://bahmni.atlassian.net/wiki/display/BAH/Cr
  **5. Make a field autocomplete**
 
 You can make an coded concept as autocomplete when there is a lot of answers to that.
-To make a field autocomplete copy the following config into conceptSetUI section under app.json of clinlical
+To make a field autocomplete copy the following config into conceptSetUI section under app.json of clinical
 
-       “<Concept Full Name>" : {
+       “<Concept Fully Specified Name>" : {
 			“autocomplete" : true,
        	}
 Make sure the Concept is Coded.
 
- **6. Configure a display control for the ECG on the Patient Dashboard.**
+ **6. Show the ECG template on the patient dashboard.**
 
-Bahmni allows configuration of several types of dashboards. One such is the patient dashboard. You will find a link to the dashboard from the consultation page that we just linked to the Emergency app. Lets configure a new section on the patient dashboard to show data from the ECG template that we set up. 
+Bahmni allows configuration of several types of dashboards. One such is the patient dashboard. You will find a link to the dashboard from the consultation page that we just linked to the Emergency app. It consists of different sections (called display controls) that can be configured to show specific pieces of information about a patient. 
+Lets configure a new "ObservationControl" on the "General" patient dashboard to show data from the ECG template that we set up. 
 
 Configuration to configure a [display control](https://bahmni.atlassian.net/wiki/display/BAH/Display+Controls+Configuration#DisplayControlsConfiguration-ObservationControl)
 
  
  **7. Configure a new patient dashboard**
 
+You can create your own dashboard if you want to. Lets move the ECG template we just created into a new Emergency dashboard. 
+
 Documentation for [patient dashboards](https://bahmni.atlassian.net/wiki/display/BAH/Configure+Patient+Dashboard)
 
 
  **8. Setup Default visit type based on login location**
 
-Documentation available [here](https://bahmni.atlassian.net/wiki/display/BAH/Configure+Patient+Registration#ConfigurePatientRegistration-4.ConfigureVisits )
+In Step 2, we created a default visit type. It is also possible to configure default visit types based on the login location of a user. Lets limit making the default visit type to OPD only for a login location of OPD-1. 
 
+Documentation available [here](https://bahmni.atlassian.net/wiki/display/BAH/Configure+Patient+Registration#ConfigurePatientRegistration-4.ConfigureVisits )
