@@ -6,7 +6,7 @@ This is a set of exercises that we can go through to understand how Bahmni can b
 Theme: Lets create a new workflow for a hospital that primarily deals with emergency care. 
 
 Exercises
----------
+=========
 
  **1. Create an emergency registration app**
  
@@ -43,6 +43,7 @@ Documentation to [import a csv](https://bahmni.atlassian.net/wiki/display/BAH/Cr
 
  
  **5. Make a field autocomplete**
+
 You can make an coded concept as autocomplete when there is a lot of answers to that.
 To make a field autocomplete copy the following config into conceptSetUI section under app.json of clinlical
 
@@ -52,6 +53,7 @@ To make a field autocomplete copy the following config into conceptSetUI section
 Make sure the Concept is Coded.
 
  **6. Configure a display control for the ECG on the Patient Dashboard.**
+
 Bahmni allows configuration of several types of dashboards. One such is the patient dashboard. You will find a link to the dashboard from the consultation page that we just linked to the Emergency app. Lets configure a new section on the patient dashboard to show data from the ECG template that we set up. 
 
 Configuration to configure a [display control](https://bahmni.atlassian.net/wiki/display/BAH/Display+Controls+Configuration#DisplayControlsConfiguration-ObservationControl)
