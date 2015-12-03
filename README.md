@@ -9,12 +9,14 @@ Exercises
 ---------
 
  **1. Create an emergency registration app**
+ 
  Create an app called Emergency in the home page once you login. On click, it should take you to the existing registration app. Have a nice logo, if you can. 
 
  Documentation for [Home Module](https://bahmni.atlassian.net/wiki/display/BAH/Home+Module)
 
  
  **2. Change default visit type from OPD to EMERGENCY**
+
 Go to the new Emergency App that we created. Click the "Create New" button. Notice that the button at the bottom defaults to Start OPD Visit. We will change this to default to “Start EMERGENCY Visit” instead. 
 
 Documentation for [Registration App](https://bahmni.atlassian.net/wiki/display/BAH/Registration+App)
@@ -25,6 +27,7 @@ Hint: Take a look at /var/www/bahmni_config/openmrs/apps/registration/app.json, 
 
 
  **3. Go to consultation after registering a patient.**
+
 Emergency registration are being performed by clinicians who need to directly go to the consultation screen. The consultation screen is available in the clinical app. Try registering a patient, then going through the clinical app and opening the patient. You will get an option to start consultation for the patient. 
 https://<ip>/bahmni/clinical/#/default/patient/{patientUuid}/dashboard/concept-set-group/observations
  
@@ -32,6 +35,7 @@ Documentation to [configure a forward url](https://bahmni.atlassian.net/wiki/dis
 
 
  **4. Upload a concept set (for adding to observation template)**
+
 To complete this task you have to upload a ECG template to the system.
 A sample csv is available [here](https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/ECG-CSV). Make sure you upload the concepts.csv before concept_set.csv. See what changes on the consultation tab once the upload is complete. 
 
