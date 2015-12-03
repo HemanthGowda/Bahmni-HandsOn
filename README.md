@@ -16,7 +16,7 @@ Take a look at /var/www/bahmni_config/openmrs/apps/registration/app.json, specif
 
       “defaultVisitType”: “OPD"
 
-Configuration for the registration app is available here.
+Configuration for the registration app is available in the following link.
 https://bahmni.atlassian.net/wiki/display/BAH/Registration+App
 
  **3. Go to consultation after registering a patient.**
@@ -32,7 +32,7 @@ https://bahmni.atlassian.net/wiki/display/BAH/Registration+Page#RegistrationPage
  https://github.com/HemanthGowda/Bahmni-HandsOn/tree/master/csv
  Make sure you upload the concepts.csv before concept_set.csv.
 
-Follow below link to know to to import csv.
+Follow below link to know how to import csv.
 https://bahmni.atlassian.net/wiki/display/BAH/Create+a+New+Observation+Form#CreateaNewObservationForm-AddObservationFormstoBahmni
  
  **5. Make a field autocomplete**
