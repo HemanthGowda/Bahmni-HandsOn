@@ -48,3 +48,15 @@ Make sure the Concept is Coded.
  To complete this task you have to configure a new section in patient dashboard which shows the data from ECG template.
  To know how to configure display controls follow the link:
  https://bahmni.atlassian.net/wiki/display/BAH/Display+Controls+Configuration#DisplayControlsConfiguration-ObservationControl
+ 
+Level 2:
+--------
+**1. Configure a new patient dashboard**
+
+Follow link to configure patient dashboard.
+https://bahmni.atlassian.net/wiki/display/BAH/Configure+Patient+Dashboard
+
+**2. Setup Default visit type based on login location (We’ll demo)**
+
+Below documentation link explains how to configure visit type based on login location.
+https://bahmni.atlassian.net/wiki/display/BAH/Configure+Patient+Registration#ConfigurePatientRegistration-4.ConfigureVisits 
