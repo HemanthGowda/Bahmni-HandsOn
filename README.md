@@ -44,14 +44,14 @@ Documentation to [import a csv](https://bahmni.atlassian.net/wiki/display/BAH/Cr
  
  **5. Make a field autocomplete**
 
-You can make an coded concept as autocomplete when there is a lot of answers to that.
-To make a field autocomplete copy the following config into conceptSetUI section under app.json of clinical
+Once we are done with importing ECG template. Lets make one of the field in that template a autocomplete field. Make sure you can make only coded concept field as autocomplete.
+We have two fields in ECG template which can be converted to autocomplete. Those are: "Type Of Visit",  "Rhythm".
+To make a field autocomplete copy the following config into conceptSetUI section under app.json of clinical module.
 
-       “<Concept Fully Specified Name>" : {
-			“autocomplete" : true,
-       	}
-Make sure the Concept is Coded.
-
+    “<Concept Fully Specified Name>" : {
+        “autocomplete" : true,
+    }
+    
  **6. Show the ECG template on the patient dashboard.**
 
 Bahmni allows configuration of several types of dashboards. One such is the patient dashboard. You will find a link to the dashboard from the consultation page that we just linked to the Emergency app. It consists of different sections (called display controls) that can be configured to show specific pieces of information about a patient. 
