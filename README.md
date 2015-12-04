@@ -29,7 +29,8 @@ Hint: Take a look at /var/www/bahmni_config/openmrs/apps/registration/app.json, 
  **3. Jump to consultation immediately after registering a patient**
 
 Emergency registration are being performed by clinicians who need to directly go to the consultation screen after registering a patient. The consultation screen is available in the clinical app. Try registering a patient, then going through the clinical app and opening the patient. You will get an option to start consultation for the patient. 
-https://<ip>/bahmni/clinical/#/default/patient/{patientUuid}/dashboard/concept-set-group/observations
+
+Hint: The url we will be going to is https://<ip>/bahmni/clinical/#/default/patient/{patientUuid}/dashboard/concept-set-group/observations
  
 Documentation to [configure a forward url](https://bahmni.atlassian.net/wiki/display/BAH/Registration+Page#RegistrationPage-Registration2ndPage)
 
